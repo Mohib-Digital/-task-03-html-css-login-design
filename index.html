@@ -8,25 +8,32 @@
 </head>
 <body>
     <div class="login_page">
-        <div class="div1"></div>
-        <div class="div2">
+        <div class="image_container">
+            <!-- Add your image here -->
+            <img src="./assets/img/Welcoming img.jpg" alt="Login Image">
+        </div>
+        <div class="form_container">
             <h1>Login</h1>
             <p>Welcome back! Please login to your <br> account</p>
             <form action="">
-                <label for="">User Name</label>
-                <br> 
-                <input type="text">
-                <br>
-                <label for="">Password</label>
-                <br>
-                <input type="password">
-                <br>
-                <input type="checkbox">
-                <label for="">Remember Me</label>
-                <span>Forget Password?</span>
-                <br>
-                <label for="">New User?</label>
+                <label for="username">User Name</label>
+                <input type="text" id="username" name="username">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                
+                <div class="remember_me">
+                    <input type="checkbox" id="remember_me" name="remember_me">
+                    <label for="remember_me">Remember Me</label>
+                    <span class="forget_password">Forget Password?</span>
+                </div>
+                
                 <input type="button" value="Login">
+                
+                <div class="new_user">
+                    <label for="">New User?</label>
+                    <a href="#">Sign up</a>
+                </div>
             </form>
         </div>
     </div>
