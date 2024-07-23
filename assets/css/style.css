@@ -16,11 +16,11 @@ body, html {
 }
 
 .login_page {
+    border-radius: 10px;
     display: flex;
     width: 100%;
     max-width: 1200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
 }
 
 .form_container, .image_container {
@@ -41,7 +41,7 @@ body, html {
 .image_container {
     background-image: url(../img/img.jpg);
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: center;
     padding: 50px;
     margin: 5px;
@@ -97,11 +97,8 @@ input[type="button"] {
 
 .new_user {
     margin-top: 20px;
+}
 
-}
-.new_user a {
-    color: #007BFF;
-}
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .login_page {
@@ -109,6 +106,13 @@ input[type="button"] {
     }
 
     .image_container {
-        height: 100%; /* Adjust as needed */
-}
+        height: 200px; 
+        padding: 80px 0; 
+        margin-top: 50px;
+    }
+
+    .form_container {
+        padding: 20px;
+        margin: 0;
+    }
 }
