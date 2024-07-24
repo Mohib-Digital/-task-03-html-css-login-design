@@ -1,118 +1,136 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.login_page {
-    border-radius: 10px;
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.login-page {
+  border-radius: 10px;
+  width: 900px;
+  height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden; /* To ensure no overflow issues */
 }
 
-.form_container, .image_container {
-    flex: 1;
-    padding: 30px;
+.img-container {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 50%;
+  height: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: tahoma;
+  color: white; /* Add text color for better visibility */
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  background: linear-gradient(to right, #00c9ff, #92fe9d, #1a2a6c);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form_container {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px;
-    border-radius: 10px;
-    margin: 5px;
-}
-
-.image_container {
-    background-image: url(../img/img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 50px;
-    margin: 5px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.form-container {
+  width: 50%;
+  padding: 20px;
 }
 
 h1 {
-    margin: 0 0 20px;
+  margin: 10px 0;
 }
 
 p {
-    margin: 0 0 30px;
-    color: gray;
+  margin: 20px 0;
 }
 
 label {
-    margin: 10px 0 5px;
-    color: gray;
+  margin: 10px 0;
+  color: gray;
 }
 
 input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.remember_me {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.remember_me span {
-    margin-left: auto;
-    color: #007BFF;
-    cursor: pointer;
+.remember-me label {
+  margin-right: 150px;
+  padding-left: 4px;
+}
+
+.remember-me span {
+  color: #007BFF;
+  cursor: pointer;
 }
 
 input[type="button"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    border: none;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.new_user {
-    margin-top: 20px;
+.new-user {
+  margin-top: 25px;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .login_page {
-        flex-direction: column;
-    }
+@media (max-width: 900px){
+  .login-page {
+      width: 100%;
+      flex-direction: column; 
+      height: auto;
+  }
+  .img-container, .form-container {
+      width: 100%;
+  }
+}
 
-    .image_container {
-        height: 200px; 
-        padding: 80px 0; 
-        margin-top: 50px;
-    }
+@media (max-width: 780px) {
+  .login-page {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 5px;
+  }
 
-    .form_container {
-        padding: 20px;
-        margin: 0;
-    }
+  .img-container, .form-container {
+      width: 100%;
+      border-radius: 0;
+  }
+
+  .img-container {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      height: 100px;
+  }
+
+  .form-container {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
 }
