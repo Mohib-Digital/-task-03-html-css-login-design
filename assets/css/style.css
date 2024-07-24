@@ -114,6 +114,7 @@ input[type="button"] {
       width: 100%;
       height: auto;
       padding: 5px;
+      margin-bottom: 15px;
   }
 
   .img-container, .form-container {
