@@ -16,7 +16,7 @@ body, html {
   border-radius: 10px;
   width: 900px;
   height: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 40px #6b6b6b;
   display: flex;
   overflow: hidden; /* To ensure no overflow issues */
 }
